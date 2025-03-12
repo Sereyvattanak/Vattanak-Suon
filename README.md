@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
         }
         header {
             background-color: #1e1e1e;
@@ -63,9 +64,38 @@
         .button:hover {
             background-color: #008c9e;
         }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #00adb5;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #008c9e;
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #121212;
+        }
+        .light-mode header, .light-mode nav {
+            background-color: #f0f0f0;
+        }
+        .light-mode nav a {
+            color: #121212;
+        }
+        .light-mode nav a:hover {
+            color: #007b8f;
+        }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
     <header>My Dark Portfolio</header>
     <nav>
         <a href="#about">About</a>
@@ -89,20 +119,4 @@
             <p>Programming: C++, Python, JavaScript</p>
             <p>Machine Learning, Deep Learning, Web Development</p>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Matrix Exponential for ODEs</li>
-                <li>Numerical Integration in C++</li>
-                <li>Deep Learning Applications in Computer Vision</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: example@domain.com</p>
-            <p>LinkedIn: linkedin.com/in/example</p>
-        </section>
-        <button class="button" onclick="alert('Thank you for visiting!')">Click Me</button>
-    </div>
-</body>
-</html>
+        <section id="
