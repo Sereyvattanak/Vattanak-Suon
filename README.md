@@ -11,6 +11,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #1e1e1e;
@@ -24,6 +25,9 @@
             justify-content: center;
             background-color: #222;
             padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
@@ -40,6 +44,11 @@
             margin: 50px auto;
             padding: 20px;
             text-align: center;
+        }
+        section {
+            padding: 50px 0;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #333;
         }
         .button {
             background-color: #00adb5;
@@ -59,16 +68,41 @@
 <body>
     <header>My Dark Portfolio</header>
     <nav>
-        <a href="about.html">About</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
     <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Click a section above to learn more about me!</p>
-        <button class="button" onclick="window.location.href='about.html'">Learn More About Me</button>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate developer and researcher in mathematics, computing, and deep learning.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Master's in Mathematics and Computing - IIT (ISM) Dhanbad</p>
+            <p>Bachelor's in Advanced Mathematics - Royal University of Phnom Penh</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Programming: C++, Python, JavaScript</p>
+            <p>Machine Learning, Deep Learning, Web Development</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Matrix Exponential for ODEs</li>
+                <li>Numerical Integration in C++</li>
+                <li>Deep Learning Applications in Computer Vision</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: example@domain.com</p>
+            <p>LinkedIn: linkedin.com/in/example</p>
+        </section>
+        <button class="button" onclick="alert('Thank you for visiting!')">Click Me</button>
     </div>
 </body>
 </html>
