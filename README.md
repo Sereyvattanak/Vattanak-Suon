@@ -3,120 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Dark Portfolio</title>
+    <title>Educational Website</title>
     <style>
         body {
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #f9f9f9;
+            color: #333;
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
-            transition: background-color 0.3s, color 0.3s;
         }
         header {
-            background-color: #1e1e1e;
+            background-color: #4CAF50;
+            color: white;
             padding: 20px;
             text-align: center;
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 24px;
         }
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #222;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-size: 18px;
-            transition: color 0.3s;
         }
         nav a:hover {
-            color: #00adb5;
+            text-decoration: underline;
         }
         .container {
+            padding: 50px;
             max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
+            margin: auto;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         section {
-            padding: 50px 0;
-            margin-bottom: 50px;
-            border-bottom: 2px solid #333;
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
         }
         .button {
-            background-color: #00adb5;
+            background-color: #4CAF50;
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            transition: background 0.3s;
             margin-top: 20px;
         }
         .button:hover {
-            background-color: #008c9e;
-        }
-        .theme-toggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #00adb5;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .theme-toggle:hover {
-            background-color: #008c9e;
-        }
-        .light-mode {
-            background-color: #ffffff;
-            color: #121212;
-        }
-        .light-mode header, .light-mode nav {
-            background-color: #f0f0f0;
-        }
-        .light-mode nav a {
-            color: #121212;
-        }
-        .light-mode nav a:hover {
-            color: #007b8f;
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
-    <header>My Dark Portfolio</header>
+    <header>Educational Website</header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#teachers">Teachers</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a passionate developer and researcher in mathematics, computing, and deep learning.</p>
+        <section id="home">
+            <h2>Welcome to Our Educational Platform</h2>
+            <p>We provide high-quality courses in mathematics, programming, and science.</p>
         </section>
-        <section id="education">
-            <h2>Education</h2>
-            <p>Master's in Mathematics and Computing - IIT (ISM) Dhanbad</p>
-            <p>Bachelor's in Advanced Mathematics - Royal University of Phnom Penh</p>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>Mathematics for Machine Learning</li>
+                <li>Introduction to Programming in Python</li>
+                <li>Data Science and AI Fundamentals</li>
+            </ul>
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Programming: C++, Python, JavaScript</p>
-            <p>Machine Learning, Deep Learning, Web Development</p>
+        <section id="teachers">
+            <h2>Meet Our Teachers</h2>
+            <p>Our instructors are experts in their fields, with years of experience in academia and industry.</p>
         </section>
-        <section id="
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: edu@example.com</p>
+            <p>Phone: +123456789</p>
+        </section>
+        <button class="button" onclick="alert('Thank you for visiting our website!')">Click Me</button>
+    </div>
+</body>
+</html>
