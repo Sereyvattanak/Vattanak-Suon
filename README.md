@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Portfolio</title>
+    <title>Modern Dark Portfolio</title>
     <style>
         body {
             background-color: #121212;
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -16,51 +16,68 @@
             background-color: #1e1e1e;
             padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
         }
         nav {
+            display: flex;
+            justify-content: center;
             background-color: #222;
-            padding: 10px;
-            text-align: center;
+            padding: 15px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #00adb5;
         }
         .container {
-            padding: 50px;
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
         }
         section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #00adb5;
             padding-bottom: 5px;
         }
         .button {
-            background-color: #333;
+            background-color: #00adb5;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
         .button:hover {
-            background-color: #555;
+            background-color: #008c9e;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #00adb5;
         }
     </style>
 </head>
 <body>
-    <header>Dark Theme Portfolio</header>
+    <header>My Dark Portfolio</header>
     <nav>
-        <a href="#about">Home</a>
+        <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -69,7 +86,7 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a passionate learner and developer with experience in web development, data science, and software engineering.</p>
+            <p>Passionate learner and developer specializing in web development, machine learning, and mathematics.</p>
         </section>
         
         <section id="education">
@@ -106,7 +123,13 @@
             <p>LinkedIn: linkedin.com/in/example</p>
         </section>
         
-        <button class="button" onclick="alert('Thank you for visiting!')">Click Me</button>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <button class="button" onclick="alert('Thanks for visiting!')">Download Resume</button>
     </div>
 </body>
 </html>
