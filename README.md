@@ -6,93 +6,99 @@
     <title>Educational Website</title>
     <style>
         body {
-            background-color: #f9f9f9;
-            color: #333;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #ffffff;
             padding: 20px;
             text-align: center;
             font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav {
-            background-color: #333;
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
             padding: 10px;
-            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            color: white;
+            color: #333;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #007BFF;
         }
         .container {
-            padding: 50px;
             max-width: 900px;
-            margin: auto;
-            background: white;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
         section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 5px;
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #45a049;
+            padding: 20px 0;
+            border-bottom: 2px solid #ddd;
         }
     </style>
 </head>
 <body>
-    <header>Educational Website</header>
+    <header>Educational Profile</header>
     <nav>
         <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#teachers">Teachers</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
-        <section id="home">
-            <h2>Welcome to Our Educational Platform</h2>
-            <p>We provide high-quality courses in mathematics, programming, and science.</p>
+        <section id="home" class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <div>
+                <h2>Your Name</h2>
+                <p>Senior Lecturer | Researcher in Applied Mathematics</p>
+                <p>Institution Name</p>
+            </div>
         </section>
-        <section id="courses">
-            <h2>Our Courses</h2>
-            <ul>
-                <li>Mathematics for Machine Learning</li>
-                <li>Introduction to Programming in Python</li>
-                <li>Data Science and AI Fundamentals</li>
-            </ul>
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>List your research papers and articles here.</p>
         </section>
-        <section id="teachers">
-            <h2>Meet Our Teachers</h2>
-            <p>Our instructors are experts in their fields, with years of experience in academia and industry.</p>
+        <section id="talks">
+            <h2>Talks</h2>
+            <p>Details about invited talks and presentations.</p>
+        </section>
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>Courses taught and academic contributions.</p>
         </section>
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: edu@example.com</p>
-            <p>Phone: +123456789</p>
+            <h2>Contact</h2>
+            <p>Email: example@domain.com</p>
+            <p>LinkedIn | ResearchGate | Github</p>
         </section>
-        <button class="button" onclick="alert('Thank you for visiting our website!')">Click Me</button>
     </div>
 </body>
 </html>
