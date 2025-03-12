@@ -39,13 +39,7 @@
             max-width: 900px;
             margin: 50px auto;
             padding: 20px;
-        }
-        section {
-            margin-bottom: 50px;
-        }
-        h2 {
-            border-bottom: 2px solid #00adb5;
-            padding-bottom: 5px;
+            text-align: center;
         }
         .button {
             background-color: #00adb5;
@@ -55,81 +49,26 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.3s;
+            margin-top: 20px;
         }
         .button:hover {
             background-color: #008c9e;
-        }
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #00adb5;
         }
     </style>
 </head>
 <body>
     <header>My Dark Portfolio</header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Passionate learner and developer specializing in web development, machine learning, and mathematics.</p>
-        </section>
-        
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>Master's in Mathematics and Computing - IIT (ISM) Dhanbad</li>
-                <li>Bachelor's in Advanced Mathematics - Royal University of Phnom Penh</li>
-            </ul>
-        </section>
-        
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: C++, Python, JavaScript</li>
-                <li>Web Development: HTML, CSS, React, Node.js</li>
-                <li>Data Science: Machine Learning, Deep Learning, Statistics</li>
-                <li>Mathematics: Functional Analysis, Linear Algebra, Probability Theory</li>
-            </ul>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Matrix Exponential for ODEs</li>
-                <li>Numerical Integration in C++</li>
-                <li>Galois Theory and Field Extensions</li>
-                <li>Deep Learning Applications in Computer Vision</li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: example@domain.com</p>
-            <p>LinkedIn: linkedin.com/in/example</p>
-        </section>
-        
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        
-        <button class="button" onclick="alert('Thanks for visiting!')">Download Resume</button>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Click a section above to learn more about me!</p>
+        <button class="button" onclick="window.location.href='about.html'">Learn More About Me</button>
     </div>
 </body>
 </html>
