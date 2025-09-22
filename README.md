@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic CV</title>
+    <title>Sereyvattanak Suon - Academic CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -12,72 +14,119 @@
         }
         
         body {
-            background-color: #f5f7f9;
+            background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%);
             color: #333;
             line-height: 1.6;
             padding: 20px;
+            min-height: 100vh;
         }
         
         .cv-container {
             max-width: 1000px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #2c3e50, #1a2530);
+            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff5252, #ff4081, #e040fb);
         }
         
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
+            font-weight: 700;
         }
         
         .header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 30px;
+            gap: 25px;
+            padding: 35px;
         }
         
         .main-content {
             grid-column: 1 / -1;
         }
         
-        .section {
+        .profile-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
             margin-bottom: 30px;
+            border-left: 5px solid #3949ab;
+        }
+        
+        .profile-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        
+        .motto {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .section {
+            margin-bottom: 35px;
         }
         
         .section-title {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            color: #1a237e;
+            border-bottom: 2px solid #3949ab;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
             display: flex;
             align-items: center;
         }
         
         .section-title i {
-            margin-right: 10px;
-            color: #3498db;
+            margin-right: 12px;
+            color: #3949ab;
+            background: #e8eaf6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .timeline-item {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             position: relative;
-            padding-left: 30px;
+            padding-left: 35px;
         }
         
         .timeline-item:before {
@@ -85,21 +134,22 @@
             position: absolute;
             left: 0;
             top: 8px;
-            width: 12px;
-            height: 12px;
-            border: 2px solid #3498db;
+            width: 14px;
+            height: 14px;
+            border: 3px solid #3949ab;
             border-radius: 50%;
             background: white;
+            z-index: 2;
         }
         
         .timeline-item:after {
             content: '';
             position: absolute;
-            left: 5px;
-            top: 22px;
+            left: 6px;
+            top: 24px;
             width: 2px;
-            height: calc(100% + 10px);
-            background: #3498db;
+            height: calc(100% + 14px);
+            background: #3949ab;
         }
         
         .timeline-item:last-child:after {
@@ -107,82 +157,127 @@
         }
         
         .item-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 6px;
+            font-size: 1.1rem;
         }
         
         .item-date {
-            color: #7f8c8d;
+            color: #666;
             font-style: italic;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: block;
+            background: #f5f5f5;
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
         }
         
         .item-details {
             color: #555;
-            margin-top: 5px;
-            font-size: 0.95rem;
+            margin-top: 8px;
+            font-size: 0.98rem;
         }
         
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
         }
         
         .tag {
             display: inline-block;
-            background: #e8f4fc;
-            color: #3498db;
-            padding: 3px 10px;
+            background: #e8eaf6;
+            color: #3949ab;
+            padding: 4px 12px;
             border-radius: 15px;
-            font-size: 0.85rem;
-            margin: 3px 5px 3px 0;
+            font-size: 0.9rem;
+            margin: 4px 6px 4px 0;
+            font-weight: 500;
         }
         
         .hobbies-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
         .hobby-item {
             flex: 1;
             min-width: 200px;
             background: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #3949ab;
         }
         
         .hobby-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-7px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
         }
         
         .hobby-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #3498db;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #3949ab;
         }
         
         .hobby-name {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
         }
         
         .hobby-desc {
-            color: #7f8c8d;
-            font-size: 0.9rem;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .idol-section {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-left: 5px solid #ff5252;
+        }
+        
+        .idol-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #3949ab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .idol-text {
+            flex: 1;
+        }
+        
+        .idol-name {
+            font-weight: 700;
+            color: #d32f2f;
+            margin-bottom: 8px;
         }
         
         @media (max-width: 768px) {
             .content {
                 grid-template-columns: 1fr;
+                padding: 20px;
             }
             
             .two-column {
@@ -192,35 +287,92 @@
             .hobby-item {
                 min-width: 100%;
             }
+            
+            .idol-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
         }
         
         .print-btn {
             display: block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background: #3498db;
+            margin: 25px auto;
+            padding: 14px 30px;
+            background: #3949ab;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(57, 73, 171, 0.3);
         }
         
         .print-btn:hover {
-            background: #2980b9;
+            background: #283593;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(57, 73, 171, 0.4);
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+            color: #666;
+            padding: 10px;
+            border-top: 1px dashed #ccc;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a237e;
+            color: white;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="cv-container">
         <div class="header">
-            <h1>Academic Curriculum Vitae</h1>
+            <h1>Sereyvattanak Suon</h1>
             <p>Master's Candidate in Applied Mathematics</p>
         </div>
         
         <div class="content">
             <div class="main-content">
+                <div class="profile-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Personal Profile</h2>
+                    <p class="profile-text">
+                        I am a young dreamer from Cambodia with a relentless drive to study hard, explore the impossible, and push boundaries. 
+                        I am passionate about learning, innovating, and tackling challenges that others may consider too difficult.
+                    </p>
+                    
+                    <div class="motto">
+                        "Never give up, keep moving forward, and stay strong. Life is about embracing hard work, overcoming obstacles, and never surrendering to difficulties."
+                    </div>
+                    
+                    <p class="profile-text">
+                        My primary field of interest lies in Machine Learning and Deep Learning, where I am eager to contribute to cutting-edge research 
+                        and develop solutions that can make a meaningful impact. I thrive on curiosity, creativity, and the pursuit of knowledge that transforms ideas into reality.
+                    </p>
+                    
+                    <div class="idol-section">
+                        <div class="idol-image">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="idol-text">
+                            <div class="idol-name">Cristiano Ronaldo - My Inspiration</div>
+                            <p>I admire him not only for his incredible talent on the field but also for his consistency, discipline, and dedication. 
+                            I try to emulate these qualities in my own life—applying the same focus, hard work, and perseverance to my studies and research.</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="section">
                     <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
                     
@@ -266,16 +418,6 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <span class="item-title">Entered the Royal University of Phnom Penh</span>
-                        <span class="item-date">2020</span>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <span class="item-title">Entrance Exam by the Mathematical Association of Cambodia</span>
-                        <span class="item-date">2023</span>
-                    </div>
-                    
-                    <div class="timeline-item">
                         <span class="item-title">Awarded ICCR Master's Program full scholarship to study in India</span>
                         <span class="item-date">2024</span>
                     </div>
@@ -283,6 +425,11 @@
                     <div class="timeline-item">
                         <span class="item-title">Gave a public talk on Operators on Inner Product Spaces in MAC</span>
                         <span class="item-date">August 2024</span>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="item-title">Entrance Exam by the Mathematical Association of Cambodia</span>
+                        <span class="item-date">2023</span>
                     </div>
                 </div>
                 
@@ -311,14 +458,6 @@
                         <span class="item-date">January 10, 2025</span>
                         <div class="item-details">
                             Cornell University, IIT(ISM) Dhanbad
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <span class="item-title">Webinar on Möbius Function by Prof. Krishnaswami Alladi</span>
-                        <span class="item-date">August 15, 2024</span>
-                        <div class="item-details">
-                            University of Florida
                         </div>
                     </div>
                 </div>
@@ -357,7 +496,7 @@
                                 <i class="fas fa-futbol"></i>
                             </div>
                             <div class="hobby-name">Football</div>
-                            <div class="hobby-desc">Enjoy playing as a midfielder, team sports enthusiast</div>
+                            <div class="hobby-desc">Enjoy playing as a midfielder, team sports enthusiast. Inspired by Cristiano Ronaldo's work ethic and dedication.</div>
                         </div>
                         
                         <div class="hobby-item">
@@ -365,7 +504,7 @@
                                 <i class="fas fa-guitar"></i>
                             </div>
                             <div class="hobby-name">Guitar</div>
-                            <div class="hobby-desc">Playing acoustic and electric guitar, enjoy classic rock</div>
+                            <div class="hobby-desc">Playing acoustic and electric guitar, enjoy classic rock and traditional Cambodian music.</div>
                         </div>
                         
                         <div class="hobby-item">
@@ -373,11 +512,20 @@
                                 <i class="fas fa-fist-raised"></i>
                             </div>
                             <div class="hobby-name">Boxing</div>
-                            <div class="hobby-desc">Training for fitness and discipline, amateur level</div>
+                            <div class="hobby-desc">Training for fitness, discipline, and mental toughness. Amateur level with focus on technique.</div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="signature">
+                    Sereyvattanak Suon<br>
+                    <span style="font-size: 0.9em;">"Never stop learning, because life never stops teaching"</span>
+                </div>
             </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2025 Sereyvattanak Suon | Email: vattanakvn1@gmail.com 
         </div>
     </div>
     
